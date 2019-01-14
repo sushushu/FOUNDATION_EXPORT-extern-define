@@ -9,7 +9,7 @@ extern是c/c++的关键字,oc/c/c++通用
 #define是oc/c/c++通用宏定义关键字
 ```
 ### 再看看他们的用法
-**.h**
+ **.h**
 ![image.png](https://upload-images.jianshu.io/upload_images/741440-f5e29f60f3bbd59f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 **.m**
 ![image.png](https://upload-images.jianshu.io/upload_images/741440-50efb5107da8897e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
@@ -26,5 +26,4 @@ extern是c/c++的关键字,oc/c/c++通用
 - 三者的区别已经简单解释过了,前2种可以说没什么区别，说下第3种吧。
 - 比较字符串是否相同除了用运算符 **==**  还可以用 **isEqualToString:** ，前2种用运算符 **==**和**isEqualToString:**都没问题，值得注意的是用#define 定义的字符串用运算符 **==** 比较的话会提示警告**Direct comparison of a string literal has undefined behavior**(但是也能正常编译)。
 - 个人比较推荐使用**FOUNDATION_EXPORT**来声明，最好是随官方做法，以防官方有什么变动。**MJExtension**也把**extern**替换成了**FOUNDATION_EXPORT**(https://github.com/CoderMJLee/MJExtension/commit/9c4f7f2d95158368532952890c405936a69171f7)
-- 如果为了省事直接用**#define**也是可以的(例如:**#define ScreenWidth  [UIScreen mainScreen].bounds.size.width**) 但是要注意**#define**只是**内容拷贝**。写了个demo来测试,有兴趣可以去下载.
-
+- 如果为了省事直接用 **#define** 也是可以的(例如:**#define ScreenWidth [UIScreen mainScreen].bounds.size.width**)但是要注意 **#define** 只是 **内容拷贝**。
